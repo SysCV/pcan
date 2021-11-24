@@ -1,6 +1,6 @@
 # PCAN for Multiple Object Tracking and Segmentation
 
-This is the offical implementation of paper [PCAN](https://arxiv.org/abs/2106.11958) for MOTS. 
+This is the offical implementation of paper [PCAN](https://papers.nips.cc/paper/2021/file/093f65e080a295f8076b1c5722a46aa2-Paper.pdf) for MOTS. 
 
 We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/). Code is under organization.
 
