@@ -1,0 +1,6 @@
+numpy
+mmcv-full==1.2.7
+mmdet==2.10.0
+motmetrics
+torch>=1.1
+torchvision
