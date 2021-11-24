@@ -1,1 +1,1 @@
-# pcan
+This is the official code repo for NeurIPS 2021 Spotlight "Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation". Please find more info at https://www.vis.xyz/pub/pcan/. Code will be available soon.
