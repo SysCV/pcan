@@ -2,7 +2,7 @@
 
 This is the offical implementation of paper [PCAN](https://arxiv.org/abs/2106.11958) for MOTS. 
 
-We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/). Code is now under organization.
+We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/). Code is under organization.
 
 > [**Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation**](https://arxiv.org/abs/2106.11958)  
 > **NeurIPS 2021, Spotlight**  
@@ -10,7 +10,7 @@ We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that co
 
 
 <div align="center">
-<img src="./figures/demo_github.gif" width="100%" />
+<img src="./figures/pcan_banner_new.gif" width="100%" />
 </div>
 
 
