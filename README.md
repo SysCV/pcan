@@ -22,8 +22,11 @@ Multiple object tracking and segmentation requires detecting, tracking, and segm
 <img src="figures/pcan-banner-final.png" width="800">
 
 ## Main results
-Without bells and whistles, our PCAN outperforms the states of the art on BDD100K and Youtube-VIS benchmarks with ResNet-50 as the base model.
-<img src="figures/pcan-results.png" width="800">
+#### Results
+
+| Detector  | mMOTSA-val | mIDF1-val | ID Sw.-val |                                            Scores-val                                            | mMOTSA-test | mIDF1-test | ID Sw.-test |                                            Scores-test                                            |                                             Config                                             |                                                                                        Weights                                                                                         |                                           Preds                                           |                                            Visuals                                            |
+| :-------: | :--------: | :-------: | :--------: | :----------------------------------------------------------------------------------------------: | :---------: | :--------: | :---------: | :-----------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
+| ResNet-50 |    28.1    |   45.4    |    874     | [scores](https://dl.cv.ethz.ch/bdd100k/mots/scores-val/pcan-frcnn_r50_fpn_12e_mots_bdd100k.json) |    31.9     |    50.4    |     845     | [scores](https://dl.cv.ethz.ch/bdd100k/mots/scores-test/pcan-frcnn_r50_fpn_12e_mots_bdd100k.json) | [config](https://github.com/SysCV/pcan/blob/main/configs/segtrack-frcnn_r50_fpn_12e_bdd10k.py) | [model](https://dl.cv.ethz.ch/bdd100k/mots/models/pcan-frcnn_r50_fpn_12e_mots_bdd100k.pth) \| [MD5](https://dl.cv.ethz.ch/bdd100k/mots/models/pcan-frcnn_r50_fpn_12e_mots_bdd100k.md5) | [preds](https://dl.cv.ethz.ch/bdd100k/mots/preds/pcan-frcnn_r50_fpn_12e_mots_bdd100k.zip) | [visuals](https://dl.cv.ethz.ch/bdd100k/mots/visuals/pcan-frcnn_r50_fpn_12e_mots_bdd100k.zip) |
 
 ## Installation
 Please refer to [INSTALL.md](docs/INSTALL.md) for installation instructions.
