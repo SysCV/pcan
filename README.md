@@ -1,12 +1,10 @@
-This is the official code repo for NeurIPS 2021 Spotlight "Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation". Please find more info at https://www.vis.xyz/pub/pcan/. Code will be available soon.
-
 # PCAN for Multiple Object Tracking and Segmentation
 
 This is the offical implementation of paper [PCAN](https://arxiv.org/abs/2106.11958) for MOTS. 
 
-We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/).
+We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/). Code is now under organization.
 
-> [**Prototypical Cross-Attention Networks (PCAN) for Multiple Object Tracking and Segmentation**](https://arxiv.org/abs/2106.11958)  
+> [**Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation**](https://arxiv.org/abs/2106.11958)  
 > **NeurIPS 2021, Spotlight**  
 > Lei Ke, Xia Li, Martin Danelljan, Yu-Wing Tai, Chi-Keung Tang, Fisher Yu
 
