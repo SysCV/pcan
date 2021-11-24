@@ -4,7 +4,7 @@ This is the offical implementation of paper [PCAN](https://arxiv.org/abs/2106.11
 
 We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/). Code is under organization.
 
-> [**Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation**](https://arxiv.org/abs/2106.11958)  
+> [**Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation**](https://papers.nips.cc/paper/2021/file/093f65e080a295f8076b1c5722a46aa2-Paper.pdf)  
 > **NeurIPS 2021, Spotlight**  
 > Lei Ke, Xia Li, Martin Danelljan, Yu-Wing Tai, Chi-Keung Tang, Fisher Yu
 
