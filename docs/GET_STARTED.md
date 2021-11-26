@@ -63,9 +63,13 @@ If your folder structure is different, you may need to change the corresponding 
 Our folder structure follows
 
 ```
-├── PCAN
+PCAN
 ├── tools
 ├── configs
+├── pcan
+├── ckpts
+├── scripts
+├── docs
 ├── data
 │   ├── bdd
 │   │   ├── images 
