@@ -9,6 +9,7 @@
 - GCC 5+
 - [mmcv](https://github.com/open-mmlab/mmcv)
 - [mmdetection](https://github.com/open-mmlab/mmdetection)
+- [BDD100K api](https://github.com/bdd100k/bdd100k)
 
 ### Install PCAN
 

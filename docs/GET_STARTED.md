@@ -36,13 +36,13 @@ mkdir data/bdd/labels/det_20
 python -m bdd100k.label.to_coco -m det -i bdd100k/labels/det_20/det_${SET_NAME}.json -o data/bdd/labels/det_20/det_${SET_NAME}_cocofmt.json
 ```
 
-To convert the tracking set, you can do as
+To convert the `tracking` set, you can do as
 ```bash
 mkdir data/bdd/labels/box_track_20
 python -m bdd100k.label.to_coco -m box_track -i bdd100k/labels/box_track_20/${SET_NAME} -o data/bdd/labels/box_track_20/box_track_${SET_NAME}_cocofmt.json
 ```
 
-For instance segmentation and segmentation tracking, converting from “JOSN + Bitmasks” and from “Bitmask” are both supported. Use this command:
+For `instance segmentation` and `segmentation tracking`, converting from “JOSN + Bitmasks” and from “Bitmask” are both supported. Use this command:
 ```bash
 python3 -m bdd100k.label.to_coco -m ins_seg|seg_track -i ${in_path} -o ${out_path} -mb ${mask_base}
 ```
