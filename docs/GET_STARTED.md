@@ -167,11 +167,6 @@ python tools/test.py ${CONFIG_FILE} ${CHECKPOINT_FILE} [--out ${RESULT_FILE}] [-
 ```
 
 ```shell
-# single-gpu testing with visualization
-bash scripts/vis_pcan.sh
-```
-
-```shell
 # multi-gpu testing
 ./tools/dist_test.sh ${CONFIG_FILE} ${CHECKPOINT_FILE} ${GPU_NUM} [--out ${RESULT_FILE}] [--eval ${EVAL_METRICS}] [--cfg-options]
 ```
@@ -186,6 +181,11 @@ Optional arguments:
 - `EVAL_METRICS`: Items to be evaluated on the results. Allowed values depend on the dataset, e.g., `bbox`, `track`.
 - `--cfg-options`: If specified, some setting in the used config will be overridden.
 
+Visualization script:
+```shell
+# single-gpu testing with visualization
+bash scripts/vis_pcan.sh
+```
 
 ### Conversion to the Scalabel/BDD100K format and Evalution
 
