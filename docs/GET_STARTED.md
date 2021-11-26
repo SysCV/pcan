@@ -181,7 +181,7 @@ Optional arguments:
 - `EVAL_METRICS`: Items to be evaluated on the results. Allowed values depend on the dataset, e.g., `bbox`, `track`.
 - `--cfg-options`: If specified, some setting in the used config will be overridden.
 
-Visualization script:
+### Visualization script
 ```shell
 # single-gpu testing with visualization
 bash scripts/vis_pcan.sh
