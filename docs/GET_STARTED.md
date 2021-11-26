@@ -4,7 +4,7 @@ This page provides basic tutorials about the usage of PCAN. For installation ins
 ## Prepare Datasets
 
 #### Download BDD100K
-We present an example based on [BDD100K](https://bdd100k.com/) dataset. Please first download the images and annotations from the [official website](https://bdd-data.berkeley.edu/). We use both `detection` set and `tracking` set for training and validate the method on `tracking` set.
+We present an example based on [BDD100K](https://bdd100k.com/) dataset. Please first download the images and annotations from the [official website](https://bdd-data.berkeley.edu/). We use `detection` set, `tracking` set, `instance seg` set and `tracking & seg` set  for training, and validate our method on `tracking & seg` set.
 For more details about the dataset, please refer to the [offial documentation](https://doc.bdd100k.com/download.html).
 
 On the offical download page, the required data and annotations are
