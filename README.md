@@ -33,7 +33,7 @@ Multiple object tracking and segmentation requires detecting, tracking, and segm
 Please refer to [INSTALL.md](docs/INSTALL.md) for installation instructions.
 
 ## Usages
-Please refer to [GET_STARTED.md](docs/GET_STARTED.md) for dataset preparation and running instructions.
+Please refer to [GET_STARTED.md](docs/GET_STARTED.md) for dataset preparation and detailed running (training, testing, visualization, etc.) instructions.
 
 
 ## Citation
