@@ -33,7 +33,7 @@ Install repo [BDD100K data api](https://github.com/bdd100k/bdd100k).
 To convert the detection set, you can do as
 ```bash
 mkdir data/bdd/labels/det_20
-python -m bdd100k.label.to_coco -m det -i bdd100k/labels/det_20/det_${SET_NAME}.json -o data/bdd/labels/det_20/det_${SET_NAME}_cocofmt.json
+python -m bdd100k.label.to_coco -m det -i data/bdd/labels/det_20/det_${SET_NAME}.json -o data/bdd/labels/det_20/det_${SET_NAME}_cocofmt.json
 ```
 
 To convert the `tracking` set, you can do as
