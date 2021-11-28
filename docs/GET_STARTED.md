@@ -20,6 +20,7 @@ On the offical download page, the required data and annotations are
 
 
 #### Convert annotations
+we also provide [pre-converted coco format jsons](https://hkustconnect-my.sharepoint.com/:u:/g/personal/lkeab_connect_ust_hk/EWhaLPcWjQtKv9-X1dWsKwgBXdQWwP7uCpRQGUPH9uklLw?e=tlY1yz) for downloading.
 
 ##### BDD100K
 To organize the annotations for training and inference, we implement a [dataset API](../pcan/datasets/parsers/coco_video_parser.py) that is similiar to COCO-style.
@@ -191,10 +192,10 @@ Optional arguments:
 bash scripts/vis_pcan.sh
 ```
 
-### Conversion to the Scalabel/BDD100K format and Evalution
+### Conversion to the BDD100K/Scalabel format and Evalution
 
 We provide [scripts](https://github.com/SysCV/pcan/blob/leike_dev/scripts/convert_to_bdd.sh) to convert the output prediction into BDD100K format jsons and masks,
-which can be submitted to BDD100K codalabs to get the final performance or evaluated offline using [script](https://github.com/SysCV/pcan/blob/leike_dev/scripts/eval_bdd_submit.sh).
+which can be submitted to [BDD100K benchmark server](https://eval.ai/web/challenges/challenge-page/1295/leaderboard/3268) to get the final performance for `test set`. You can also evaluate `val set` offline using [script](https://github.com/SysCV/pcan/blob/leike_dev/scripts/eval_bdd_submit.sh) for final performance.
 
 
 ```shell

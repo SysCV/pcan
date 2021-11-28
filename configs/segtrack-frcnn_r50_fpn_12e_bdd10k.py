@@ -66,7 +66,7 @@ data = dict(
     train=[
         dict(
             type=dataset_type,
-            ann_file=data_root + 'labels/seg_track_20/seg_track_train_cocoformat_new.json',
+            ann_file=data_root + 'labels/seg_track_20/seg_track_train_cocoformat.json',
             img_prefix=data_root + 'images/seg_track_20/train',
             key_img_sampler=dict(interval=1),
             ref_img_sampler=dict(num_ref_imgs=1, scope=3, method='uniform'),
@@ -85,8 +85,10 @@ data = dict(
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'labels/seg_track_20/seg_track_test_cocofmt.json',
-        img_prefix=data_root + 'images/seg_track_20/test',
+        ann_file=data_root + 'labels/seg_track_20/seg_track_val_cocoformat.json',
+        #ann_file=data_root + 'labels/seg_track_20/seg_track_test_cocofmt.json',
+        img_prefix=data_root + 'images/seg_track_20/val',
+        #img_prefix=data_root + 'images/seg_track_20/test',
         pipeline=test_pipeline))
         
 # optimizer
