@@ -20,7 +20,7 @@ On the offical download page, the required data and annotations are
 
 
 #### Convert annotations
-we also provide [pre-converted coco format jsons](https://hkustconnect-my.sharepoint.com/:u:/g/personal/lkeab_connect_ust_hk/EWhaLPcWjQtKv9-X1dWsKwgBXdQWwP7uCpRQGUPH9uklLw?e=tlY1yz) for downloading.
+we also provide [pre-converted coco format jsons](https://hkustconnect-my.sharepoint.com/:u:/g/personal/lkeab_connect_ust_hk/EWhaLPcWjQtKv9-X1dWsKwgBXdQWwP7uCpRQGUPH9uklLw?e=tlY1yz) for downloading if you want to skip the following transformation process to COCO-style.
 
 ##### BDD100K
 To organize the annotations for training and inference, we implement a [dataset API](../pcan/datasets/parsers/coco_video_parser.py) that is similiar to COCO-style.
