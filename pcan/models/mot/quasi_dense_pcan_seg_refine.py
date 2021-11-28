@@ -27,7 +27,6 @@ class EMQuasiDenseMaskRCNNRefine(QuasiDenseMaskRCNN):
                 param.requires_grad = False
 
     def forward_test(self, img, img_metas, rescale=False):
-    #def forward_test(self, img, img_metas, ref_img, ref_img_metas, rescale=False):
         # TODO inherit from a base tracker
         assert self.roi_head.with_track, 'Track head must be implemented.'
         img_metas = img_metas[0]
@@ -86,5 +85,3 @@ class EMQuasiDenseMaskRCNNRefine(QuasiDenseMaskRCNN):
 
         return dict(bbox_result=bbox_result, segm_result=update_cls_segms,
                     track_result=track_result)
-        #return dict(bbox_result=refine_bbox_result, segm_result=refine_segm_result,
-        #            track_result=track_result)

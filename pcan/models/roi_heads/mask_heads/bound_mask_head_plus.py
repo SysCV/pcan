@@ -128,9 +128,7 @@ class BoundFCNMaskHeadPlus(FCNMaskHead):
 
             loss_bound = L.JointLoss(L.BceLoss(), L.BceLoss())(
                 bound_pred.unsqueeze(1), bound_targets.to(dtype=torch.float32))
-
-
-        #print('loss bound:', loss_bound.shape)
+                
         loss['loss_bound'] = loss_bound * 0.5
         return loss
 

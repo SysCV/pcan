@@ -263,9 +263,6 @@ class EMMatchHeadPlus(nn.Module):
         return fore_feat
 
     def gather_context(self, feat, gap):
-        # print('feat shape:', feat.shape)
-        # print('gap shape:', gap.shape)
-        # print('pos mu shape:', pos_mu.shape)
         res = self.conv1(feat) + self.conv2(gap)
         return res
 
@@ -353,7 +350,6 @@ class EMMatchHeadPlus(nn.Module):
         bboxes = bboxes / scale_factor
 
         N = len(mask_pred)
-        #print('N in em head:', N)
         # The actual implementation split the input into chunks,
         # and paste them chunk by chunk.
         if device.type == 'cpu':

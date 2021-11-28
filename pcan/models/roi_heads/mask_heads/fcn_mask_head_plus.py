@@ -83,10 +83,7 @@ class FCNMaskHeadPlus(FCNMaskHead):
             dtype=torch.bool if threshold >= 0 else torch.uint8)
 
         if not self.class_agnostic:
-            #print('enter not class agnostic'*3)
-            #print('ori mask pred shape:', mask_pred.shape)
             mask_pred = mask_pred[range(N), labels][:, None]
-            #print('after mask pred shape:', mask_pred.shape)
 
         for inds in chunks:
             masks_chunk, spatial_inds = _do_paste_mask(

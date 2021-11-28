@@ -43,8 +43,6 @@ class QuasiDenseMaskRCNN(EMQuasiDenseFasterRCNN):
             self.init_tracker()
 
         x = self.extract_feat(img[0])
-        # ref_x = self.extract_feat(ref_img)
-        #x = self.em(x, ref_x)
 
         proposal_list = self.rpn_head.simple_test_rpn(x, img_metas)
         det_bboxes, det_labels, det_masks, track_feats = (

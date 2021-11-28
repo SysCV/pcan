@@ -53,7 +53,6 @@ class BoundFCNMaskHeadPlus(FCNMaskHead):
             self.conv_out_channels if self.num_convs > 0 else in_channels)
         upsample_cfg_ = self.upsample_cfg.copy()
 
-        #print('upsample method:', self.upsample_method)
         if self.upsample_method is None:
             self.upsample_b = None
         elif self.upsample_method == 'deconv':
@@ -85,14 +84,12 @@ class BoundFCNMaskHeadPlus(FCNMaskHead):
             if self.upsample_method == 'deconv':
                 x = self.relu(x)
         mask_pred = self.conv_logits(x)
-        #print('mask pred:', mask_pred.shape)
 
         if self.upsample_b is not None:
             x_b = self.upsample_b(x_b)
             if self.upsample_method == 'deconv':
                 x_b = self.relu(x_b)
         bound_pred = self.conv_logits_b(x_b)
-        #print('bound pred:', bound_pred.shape)
         return mask_pred, bound_pred
 
     @force_fp32(apply_to=('mask_pred', ))
