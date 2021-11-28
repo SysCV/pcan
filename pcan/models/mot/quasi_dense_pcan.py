@@ -32,6 +32,14 @@ class EMQuasiDenseFasterRCNN(QuasiDenseFasterRCNN):
             protos = self._l2norm(protos, dim=1)
             self.register_buffer('mu%d' % i, protos)
 
+    @force_fp32(apply_to=('inp', ))
+    def _l1norm(self, inp, dim):
+        return inp / (1e-6 + inp.sum(dim=dim, keepdim=True))
+
+    @force_fp32(apply_to=('inp', ))
+    def _l2norm(self, inp, dim):
+        return inp / (1e-6 + inp.norm(dim=dim, keepdim=True))
+
     def forward(self, img, img_metas, return_loss=True, **kwargs):
         if return_loss:
             return self.forward_train(img, img_metas, **kwargs)
