@@ -92,6 +92,7 @@ class EMMatchHeadPlus(nn.Module):
         self.match_with_pids = match_with_pids
         self.loss_mask = build_loss(loss_mask)
         self.frame_num = 0
+        self.momentum = 0.95
 
         padding = (self.conv_kernel_size - 1) // 2
         conv1_in_channels = self.in_channels + 2
@@ -243,6 +244,14 @@ class EMMatchHeadPlus(nn.Module):
             mask = torch.cat((mask_a, mask_b), dim=2)
             pos_mu = self._em_iter(feat, mask, self.pos_mu)
             neg_mu = self._em_iter(feat, 1 - mask, self.neg_mu)
+
+        with torch.no_grad():
+            mu_p = pos_mu.mean(dim=0, keepdim=True)
+            mu_n = neg_mu.mean(dim=0, keepdim=True)
+            self.pos_mu *= self.momentum
+            self.pos_mu += mu_p * (1 - self.momentum)
+            self.neg_mu *= self.momentum
+            self.neg_mu += mu_n * (1 - self.momentum)
 
         mu = torch.cat((pos_mu, neg_mu), dim=2)
         pos_mu_c = pos_mu.clone()
