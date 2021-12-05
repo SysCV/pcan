@@ -138,12 +138,11 @@ def aggregate_eval_results(summary,
 
     new_summary['motp'] = (1 - new_summary['motp']) * 100
 
+    new_summary_c = new_summary.copy()
 
     if generate_overall and class_average:
         new_res = []
         res_average = new_summary.fillna(0).mean()
-        #print('new summary m:', new_summary.head(6))
-        #res_average = new_summary.head(6).fillna(0).mean()
         res_sum = new_summary.sum()
         for metric in metrics:
             if metric in ['mota', 'motp', 'idf1']:
@@ -154,11 +153,8 @@ def aggregate_eval_results(summary,
 
     if generate_overall and class_average:
         new_res = []
-        #print('new summary m:', new_summary)
-        #new_summary.replace([np.inf, -np.inf], np.nan)
-        #res_average = new_summary.fillna(0).mean()
-        res_average = new_summary.head(6).fillna(0).mean()
-        res_sum = new_summary.sum()
+        res_average = new_summary_c.head(6).fillna(0).mean()
+        res_sum = new_summary_c.sum()
         for metric in metrics:
             if metric in ['mota', 'motp', 'idf1']:
                 new_res.append(res_average[metric])

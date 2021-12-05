@@ -64,8 +64,8 @@ class EMQuasiDenseMaskRCNNRefine(QuasiDenseMaskRCNN):
             ref_z = self._prop(x[i], protos)            
             ref_r = torch.einsum('bck,bnk->bcn', (protos, ref_z))
             ref_r = ref_r.view(B, C, H, W)
-            self.memo_banks[i] = x[i]
             x[i] = x[i] * 0.75 + ref_r * 0.25
+            self.memo_banks[i] = x[i] * 0.75 + self.memo_banks[i] * 0.25
             self.mus[i] = self.mus[i] * 0.5 + protos * 0.5
 
         x = tuple(x)
