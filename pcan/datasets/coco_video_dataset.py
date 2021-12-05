@@ -311,25 +311,25 @@ class CocoVideoDataset(CocoDataset):
             if metric not in allowed_metrics:
                 raise KeyError(f'metric {metric} is not supported')
 
-        super_metrics = ['bbox', 'segm']
+        # super_metrics = ['bbox', 'segm']
     
-        if super_metrics:
-            if 'bbox' in super_metrics and 'segm' in super_metrics:
-                super_results = []
-                for bbox, segm in zip(results['bbox_result'],
-                                      results['segm_result']):
-                    super_results.append((bbox, segm))
-            else:
-                super_results = results['bbox_result']
-            super_eval_results = super().evaluate(
-                results=super_results,
-                metric=super_metrics,
-                logger=logger,
-                classwise=classwise,
-                proposal_nums=proposal_nums,
-                iou_thrs=iou_thr,
-                metric_items=metric_items)
-            eval_results.update(super_eval_results)
+        # if super_metrics:
+        #     if 'bbox' in super_metrics and 'segm' in super_metrics:
+        #         super_results = []
+        #         for bbox, segm in zip(results['bbox_result'],
+        #                               results['segm_result']):
+        #             super_results.append((bbox, segm))
+        #     else:
+        #         super_results = results['bbox_result']
+        #     super_eval_results = super().evaluate(
+        #         results=super_results,
+        #         metric=super_metrics,
+        #         logger=logger,
+        #         classwise=classwise,
+        #         proposal_nums=proposal_nums,
+        #         iou_thrs=iou_thr,
+        #         metric_items=metric_items)
+        #     eval_results.update(super_eval_results)
 
         if 'segtrack' in metrics:
             track_eval_results = eval_mots(

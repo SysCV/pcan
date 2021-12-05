@@ -6,6 +6,7 @@ from pcan.core import segtrack2result
 from ..builder import MODELS
 from .quasi_dense_pcan_seg import QuasiDenseMaskRCNN
 
+import torch.nn.functional as F
 
 @MODELS.register_module()
 class EMQuasiDenseMaskRCNNRefine(QuasiDenseMaskRCNN):
@@ -26,15 +27,49 @@ class EMQuasiDenseMaskRCNNRefine(QuasiDenseMaskRCNN):
             for name, param in module.named_parameters():
                 param.requires_grad = False
 
+    @torch.no_grad()
+    def _em_iter(self, x, mu):
+        R, C, H, W = x.size()
+        x = x.view(R, C, H * W)                                 # r * c * n
+        for _ in range(self.stage_num):
+            z = torch.einsum('rcn,rck->rnk', (x, mu))           # r * n * k
+            z = F.softmax(20 * z, dim=2)                        # r * n * k
+            z = self._l1norm(z, dim=1)                          # r * n * k
+            mu = torch.einsum('rcn,rnk->rck', (x, z))           # r * c * k
+            mu = self._l2norm(mu, dim=1)                        # r * c * k
+        return mu
+
+    def _prop(self, feat, mu):
+        B, C, H, W = feat.size()
+        x = feat.view(B, C, -1)                             # B * C * N
+        z = torch.einsum('bcn,bck->bnk', (x, mu))           # B * N * K
+        z = F.softmax(z, dim=2)                             # B * N * K
+        return z
+
     def forward_test(self, img, img_metas, rescale=False):
         # TODO inherit from a base tracker
         assert self.roi_head.with_track, 'Track head must be implemented.'
         img_metas = img_metas[0]
         frame_id = img_metas[0].get('frame_id', -1)
+        x = self.extract_feat(img[0])
         if frame_id == 0:
             self.init_tracker()
+            self.memo_banks = [x[0], x[1], x[2]]
+            self.mus = [self.mu0, self.mu1, self.mu2]
 
-        x = self.extract_feat(img[0])
+        x = list(x)
+        for i in range(2):
+            B, C, H, W = self.memo_banks[i].size()
+            protos = self._em_iter(self.memo_banks[i], self.mus[i])
+            ref_z = self._prop(x[i], protos)            
+            ref_r = torch.einsum('bck,bnk->bcn', (protos, ref_z))
+            ref_r = ref_r.view(B, C, H, W)
+            self.memo_banks[i] = x[i]
+            x[i] = x[i] * 0.75 + ref_r * 0.25
+            self.mus[i] = self.mus[i] * 0.5 + protos * 0.5
+
+        x = tuple(x)
+
         proposal_list = self.rpn_head.simple_test_rpn(x, img_metas)
         det_bboxes, det_labels, det_masks, track_feats = (
             self.roi_head.simple_test(x, img_metas, proposal_list, rescale))
