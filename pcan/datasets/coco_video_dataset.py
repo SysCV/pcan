@@ -32,21 +32,15 @@ class CocoVideoDataset(CocoDataset):
     def load_annotations(self, ann_file):
         """Load annotation from annotation file."""
         if not self.load_as_video:
-            print('ann file:', len(ann_file))
-            print('ann file:', ann_file)
             data_infos = super().load_annotations(ann_file)
         else:
             data_infos = self.load_video_anns(ann_file)
         return data_infos
 
     def load_video_anns(self, ann_file):
-        print('ann file:', ann_file)
         self.coco = CocoVID(ann_file)
-        print('class names:', self.CLASSES)
         self.cat_ids = self.coco.get_cat_ids(cat_names=self.CLASSES)
-        print('self carids:', self.cat_ids)
         self.cat2label = {cat_id: i for i, cat_id in enumerate(self.cat_ids)}
-        print('self car2label:', self.cat2label)
 
         data_infos = []
         self.vid_ids = self.coco.get_vid_ids()
@@ -310,26 +304,6 @@ class CocoVideoDataset(CocoDataset):
         for metric in metrics:
             if metric not in allowed_metrics:
                 raise KeyError(f'metric {metric} is not supported')
-
-        # super_metrics = ['bbox', 'segm']
-    
-        # if super_metrics:
-        #     if 'bbox' in super_metrics and 'segm' in super_metrics:
-        #         super_results = []
-        #         for bbox, segm in zip(results['bbox_result'],
-        #                               results['segm_result']):
-        #             super_results.append((bbox, segm))
-        #     else:
-        #         super_results = results['bbox_result']
-        #     super_eval_results = super().evaluate(
-        #         results=super_results,
-        #         metric=super_metrics,
-        #         logger=logger,
-        #         classwise=classwise,
-        #         proposal_nums=proposal_nums,
-        #         iou_thrs=iou_thr,
-        #         metric_items=metric_items)
-        #     eval_results.update(super_eval_results)
 
         if 'segtrack' in metrics:
             track_eval_results = eval_mots(

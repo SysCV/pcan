@@ -83,7 +83,6 @@ class EMQuasiDenseMaskRCNNRefine(QuasiDenseMaskRCNN):
             from collections import defaultdict
             track_result = defaultdict(list)
             refine_bbox_result = bbox_result
-            #refine_segm_result = defaultdict(list)
             update_cls_segms = segm_result
         else:
             bboxes, labels, masks, ids, embeds, ref_feats, ref_masks, inds, valids = (
