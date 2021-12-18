@@ -3,7 +3,7 @@
 
 This is the offical implementation of paper [PCAN](https://papers.nips.cc/paper/2021/file/093f65e080a295f8076b1c5722a46aa2-Paper.pdf) for MOTS. 
 
-We also present a [trailer](https://www.youtube.com/watch?v=Vt-kYDPfh10) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/). **Code is under organization.**
+We also present a [trailer](https://www.youtube.com/watch?v=hhAC2H0fmP8) that consists of method illustrations and tracking & segmentation visualizations. Our project website contains more information: [vis.xyz/pub/pcan](https://www.vis.xyz/pub/pcan/).
 
 > [**Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation**](https://papers.nips.cc/paper/2021/file/093f65e080a295f8076b1c5722a46aa2-Paper.pdf)  
 > **NeurIPS 2021, Spotlight**  
@@ -35,6 +35,10 @@ Please refer to [INSTALL.md](docs/INSTALL.md) for installation instructions.
 ## Usages
 Please refer to [GET_STARTED.md](docs/GET_STARTED.md) for dataset preparation and detailed running (training, testing, visualization, etc.) instructions.
 
+
+## Related links
+[Youtube Video](https://www.youtube.com/watch?v=hhAC2H0fmP8) | [Bilibili Video](https://www.bilibili.com/video/BV1Rb4y1i7zS?spm_id_from=333.999.0.0)|
+[Zhihu Reading](https://zhuanlan.zhihu.com/p/445457150)
 
 ## Citation
 If you find PCAN useful in your research or refer to the provided baseline results, please star :star: this repository and consider citing :pencil::
