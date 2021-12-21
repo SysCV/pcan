@@ -45,7 +45,7 @@ If you find PCAN useful in your research or refer to the provided baseline resul
 ```
 @inproceedings{pcan,
     author    = {Ke, Lei and Li, Xia and Danelljan, Martin and Tai, Yu-Wing and Tang, Chi-Keung and Yu, Fisher},
-    booktitle = {Advances in Neural Information Processing Systems},
+    booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
     title     = {Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation},
     year      = {2021}
 }
