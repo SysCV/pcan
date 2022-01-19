@@ -194,8 +194,8 @@ bash scripts/vis_pcan.sh
 
 ### Conversion to the BDD100K/Scalabel format and Evalution
 
-We provide [scripts](https://github.com/SysCV/pcan/blob/leike_dev/scripts/convert_to_bdd.sh) to convert the output prediction into BDD100K format jsons and masks,
-which can be submitted to [BDD100K benchmark server](https://eval.ai/web/challenges/challenge-page/1295/leaderboard/3268) to get the final performance for `test set`. You can also evaluate `val set` offline using [script](https://github.com/SysCV/pcan/blob/leike_dev/scripts/eval_bdd_submit.sh) for final performance.
+We provide [scripts](https://github.com/SysCV/pcan/blob/main/scripts/convert_to_bdd.sh) to convert the output prediction into BDD100K format jsons and masks,
+which can be submitted to [BDD100K benchmark server](https://eval.ai/web/challenges/challenge-page/1295/leaderboard/3268) to get the final performance for `test set`. You can also evaluate `val set` offline using [script](https://github.com/SysCV/pcan/blob/main/scripts/eval_bdd_submit.sh) for final performance.
 
 
 ```shell
