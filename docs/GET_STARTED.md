@@ -106,7 +106,7 @@ We provide config files in [configs](../configs).
 
 ### Train a model
 
-Download the intial [model weights](https://hkustconnect-my.sharepoint.com/:u:/g/personal/lkeab_connect_ust_hk/EYaf3x8hV6BGiYH3RpNVhTAB1H_OefsfjkNendSEfU_zHg?e=EoaglR) from BDD100k MOT tracking set and put it under `ckpts` folder. 
+Download the [initial model weights](https://hkustconnect-my.sharepoint.com/:u:/g/personal/lkeab_connect_ust_hk/EYaf3x8hV6BGiYH3RpNVhTAB1H_OefsfjkNendSEfU_zHg?e=EoaglR) from BDD100k MOT tracking set and put it under `ckpts` folder. 
 
 #### Train with a single GPU
 
