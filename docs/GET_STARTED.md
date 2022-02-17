@@ -209,5 +209,5 @@ Optional arguments:
 - `COCO_PRED_FILE`: Filename of the json in coco submission format.
 
 ### Note on BDD Segmentation Tracking Split
-BDD100k officially extended the validation set size in the beginning of year 2021 (from 10 validation video sequences to 32), which resulted in the different reported results compared to QDTrack with elder verison. And the ground truth (GT) mask annotation has been redefined to replace polygons with more accurate bitmasks.
+BDD100k officially extended the validation set size in the beginning of year 2021 (from 10 validation video sequences to 32), which resulted in the different reported results compared to QDTrack paper with elder verison. And the ground truth (GT) mask annotation has been redefined to replace polygons with more accurate bitmasks.
 
