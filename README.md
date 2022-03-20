@@ -44,9 +44,9 @@ Please refer to [GET_STARTED.md](docs/GET_STARTED.md) for dataset preparation an
 If you find PCAN useful in your research or refer to the provided baseline results, please star :star: this repository and consider citing :pencil::
 ```
 @inproceedings{pcan,
-    title     = {Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation},
-    author    = {Ke, Lei and Li, Xia and Danelljan, Martin and Tai, Yu-Wing and Tang, Chi-Keung and Yu, Fisher},
-    booktitle = {Advances in Neural Information Processing Systems},
-    volume = {34},
-    year = {2021}
+  title={Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation},
+  author={Ke, Lei and Li, Xia and Danelljan, Martin and Tai, Yu-Wing and Tang, Chi-Keung and Yu, Fisher},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={34},
+  year={2021}
 }
