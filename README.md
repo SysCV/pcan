@@ -47,6 +47,5 @@ If you find PCAN useful in your research or refer to the provided baseline resul
   title={Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation},
   author={Ke, Lei and Li, Xia and Danelljan, Martin and Tai, Yu-Wing and Tang, Chi-Keung and Yu, Fisher},
   booktitle={Advances in Neural Information Processing Systems},
-  volume={34},
   year={2021}
 }
