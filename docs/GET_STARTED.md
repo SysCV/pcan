@@ -197,6 +197,7 @@ bash scripts/vis_pcan.sh
 We provide [scripts](https://github.com/SysCV/pcan/blob/main/scripts/convert_to_bdd.sh) to convert the output prediction into BDD100K format jsons and masks,
 which can be submitted to [BDD100K benchmark server](https://eval.ai/web/challenges/challenge-page/1295/leaderboard/3268) to get the final performance for `test set`. You can also evaluate `val set` offline using [script](https://github.com/SysCV/pcan/blob/main/scripts/eval_bdd_submit.sh) for final performance.
 
+If you meet the problem 'No BDD100K format jsons generated after running convert_to_bdd.sh', please refer to the [answer here](https://github.com/SysCV/pcan/issues/20).
 
 ```shell
 python tools/to_bdd100k.py ${CONFIG_FILE} [--res ${RESULT_FILE}] [--task ${EVAL_METRICS}] [--bdd-dir ${BDD_OUTPUT_DIR} --nproc ${PROCESS_NUM}] [--coco-file ${COCO_PRED_FILE}]
